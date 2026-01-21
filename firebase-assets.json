@@ -1,0 +1,90 @@
+{
+  "bucket": "kalinka-dashboard.firebasestorage.app",
+  "baseUrl": "https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/",
+  "urlSuffix": "?alt=media",
+
+  "projects": {
+    "rise-villas": {
+      "name": "Rise Villas Phuket",
+      "basePath": "Rise/Rise Villas",
+
+      "renders": {
+        "exterior": {
+          "path": "Рендеры/Экстерьер/Hi-Res",
+          "files": [
+            {"name": "CAM_001244.jpg", "description": "Вилла Тип 1 - вид спереди"},
+            {"name": "CAM_002244.jpg", "description": "Вилла Тип 2 - вид спереди"},
+            {"name": "CAM_003245.jpg", "description": "Вилла Тип 3 - вид спереди"},
+            {"name": "CAM_004247.jpg", "description": "Таунхаус - вид спереди"},
+            {"name": "CAM_005249.jpg", "description": "Общий вид комплекса - главное изображение"},
+            {"name": "CAM_006.jpg", "description": "Вечерний вид"},
+            {"name": "CAM_007.jpg", "description": "Вид на бассейн"},
+            {"name": "CAM_008.jpg", "description": "Терраса"}
+          ]
+        },
+        "interior": {
+          "path": "Рендеры/Интерьер/Hi-Res",
+          "files": [
+            {"name": "INT_001.jpg", "description": "Гостиная"},
+            {"name": "INT_002.jpg", "description": "Спальня"},
+            {"name": "INT_003.jpg", "description": "Кухня"},
+            {"name": "INT_004.jpg", "description": "Ванная"}
+          ]
+        },
+        "aerial": {
+          "path": "Рендеры/Аэросъемка",
+          "files": [
+            {"name": "AERIAL_001.jpg", "description": "Вид сверху на комплекс"},
+            {"name": "AERIAL_002.jpg", "description": "Панорама района"}
+          ]
+        }
+      },
+
+      "location": {
+        "path": "Локация",
+        "files": [
+          {"name": "Локация1.jpg", "description": "Карта расположения"},
+          {"name": "Локация1 копия.jpg", "description": "Карта расположения (альт)"},
+          {"name": "Map.jpg", "description": "Схема проезда"}
+        ]
+      },
+
+      "plans": {
+        "path": "Планировки",
+        "files": [
+          {"name": "Type1_Floor.jpg", "description": "Планировка Тип 1"},
+          {"name": "Type2_Floor.jpg", "description": "Планировка Тип 2"},
+          {"name": "Type3_Floor.jpg", "description": "Планировка Тип 3"},
+          {"name": "Type4_Floor.jpg", "description": "Планировка Тип 4"},
+          {"name": "Townhouse_Floor.jpg", "description": "Планировка Таунхаус"}
+        ]
+      },
+
+      "masterplan": {
+        "path": "Мастерплан",
+        "files": [
+          {"name": "Masterplan.jpg", "description": "Генеральный план комплекса"},
+          {"name": "Masterplan_numbered.jpg", "description": "План с номерами участков"}
+        ]
+      },
+
+      "amenities": {
+        "path": "Инфраструктура",
+        "files": [
+          {"name": "Pool.jpg", "description": "Общий бассейн"},
+          {"name": "Gym.jpg", "description": "Фитнес-центр"},
+          {"name": "Lobby.jpg", "description": "Лобби"}
+        ]
+      }
+    }
+  },
+
+  "_usage": {
+    "description": "Как использовать этот файл",
+    "urlFormula": "baseUrl + encodeURIComponent(basePath + '/' + category.path + '/' + file.name) + urlSuffix",
+    "example": {
+      "input": "Rise/Rise Villas/Рендеры/Экстерьер/Hi-Res/CAM_001244.jpg",
+      "output": "https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%2FHi-Res%2FCAM_001244.jpg?alt=media"
+    }
+  }
+}
