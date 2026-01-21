@@ -1,0 +1,294 @@
+{
+  "bucket": "kalinka-dashboard.firebasestorage.app",
+  "baseUrl": "https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/",
+  "urlSuffix": "?alt=media",
+
+  "projects": {
+    "rise-villas": {
+      "name": "Rise Villas Phuket",
+      "basePath": "Rise/Rise Villas",
+
+      "documents": {
+        "path": "Документы",
+        "files": [
+          {"name": "DBD.pdf", "description": "Документ DBD"},
+          {"name": "Land.pdf", "description": "Документ на землю"}
+        ]
+      },
+
+      "location": {
+        "path": "Локация",
+        "files": [
+          {"name": "location.png", "description": "Карта локации (PNG)"},
+          {"name": "Локация.docx", "description": "Описание локации"},
+          {"name": "Локация1.jpg", "description": "Карта локации v1"},
+          {"name": "Локация1 копия.jpg", "description": "Карта локации v2 (текущая)"}
+        ]
+      },
+
+      "masterplan": {
+        "path": "Мастер план",
+        "files": [
+          {"name": "Master Plan (unit types)2.jpg", "description": "Мастер-план с типами юнитов"},
+          {"name": "Master Plan3.jpg", "description": "Мастер-план общий"}
+        ]
+      },
+
+      "floorplans": {
+        "townhouse": {
+          "path": "Планировки/Taунхаус",
+          "files": [
+            {"name": "Townhouse 3D view Render 1st floor4.jpg", "description": "3D вид 1 этаж"},
+            {"name": "Townhouse 3D view render 2nd floor5.jpg", "description": "3D вид 2 этаж"},
+            {"name": "Townhouse. 3D view 1.pdf", "description": "3D вид 1 (PDF)"},
+            {"name": "Townhouse. 3D view 2.pdf", "description": "3D вид 2 (PDF)"},
+            {"name": "Townhouse. Floor plans.pdf", "description": "Планировки (PDF)"}
+          ]
+        },
+        "villa_type1": {
+          "path": "Планировки/Виллы/Тип 1",
+          "files": [
+            {"name": "Type 1. Twin Villa. 3D view 1.pdf", "description": "3D вид 1"},
+            {"name": "Type 1. Twin Villa. 3D view 2.pdf", "description": "3D вид 2"},
+            {"name": "Type 1. Twin Villa. Floor plans.pdf", "description": "Планировки"}
+          ]
+        },
+        "villa_type2": {
+          "path": "Планировки/Виллы/Тип 2",
+          "files": [
+            {"name": "Type 2. Twin Villa.  3D view 1.pdf", "description": "3D вид 1"},
+            {"name": "Type 2. Twin Villa.  3D view 2.pdf", "description": "3D вид 2"},
+            {"name": "Type 2. Twin Villa. Floor plans.pdf", "description": "Планировки"}
+          ]
+        },
+        "villa_type3": {
+          "path": "Планировки/Виллы/Тип 3",
+          "files": [
+            {"name": "Type 3. Twin Villa. 3D view 1.pdf", "description": "3D вид 1"},
+            {"name": "Type 3. Twin Villa. 3D view 2.pdf", "description": "3D вид 2"},
+            {"name": "Type 3. Twin Villa. Floor plans.pdf", "description": "Планировки"}
+          ]
+        },
+        "villa_type4_1": {
+          "path": "Планировки/Виллы/Тип 4/Тип 4.1",
+          "files": [
+            {"name": "Type 4.1 Twin Villa. 3D view 1.pdf", "description": "3D вид 1"},
+            {"name": "Type 4.1 Twin Villa. 3D view 2.pdf", "description": "3D вид 2"},
+            {"name": "Type 4.1 Twin Villa. Floor plans.pdf", "description": "Планировки"}
+          ]
+        },
+        "villa_type4_2": {
+          "path": "Планировки/Виллы/Тип 4/Тип 4.2",
+          "files": [
+            {"name": "Type 4.2 Twin Villa. 3D view 1.pdf", "description": "3D вид 1"},
+            {"name": "Type 4.2 Twin Villa. 3D view 2.pdf", "description": "3D вид 2"},
+            {"name": "Type 4.2 Twin Villa. Floor plans.pdf", "description": "Планировки"}
+          ]
+        },
+        "villa_type5": {
+          "path": "Планировки/Виллы/Тип 5",
+          "files": [
+            {"name": "Type 5. Twin Villa. 1st floor plan.pdf", "description": "План 1 этажа"},
+            {"name": "Type 5. Twin Villa. 3D view 1.pdf", "description": "3D вид 1"},
+            {"name": "Type 5. Twin Villa. 3D view 2.pdf", "description": "3D вид 2"}
+          ]
+        }
+      },
+
+      "pricelist": {
+        "path": "Прайс Лист",
+        "files": [
+          {"name": "Pre sale new rus.pdf", "description": "Прайс-лист пресейл (рус)"},
+          {"name": "График платежей.pdf", "description": "График платежей"}
+        ]
+      },
+
+      "presentations": {
+        "path": "Презентации",
+        "files": [
+          {"name": "rise_client_rus.pdf", "description": "Клиентская презентация (рус)"}
+        ]
+      },
+
+      "promo": {
+        "path": "Промо материалы",
+        "files": [
+          {"name": "Ru_01-Villa-19206.jpg", "description": "Промо вилла 1 (1920)"},
+          {"name": "Ru_01-Villa-feed7.jpg", "description": "Промо вилла 1 (feed)"},
+          {"name": "Ru_02-Villa-19208.jpg", "description": "Промо вилла 2 (1920)"},
+          {"name": "Ru_02-Villa-feed9.jpg", "description": "Промо вилла 2 (feed)"},
+          {"name": "Ru_03-Villa-192010.jpg", "description": "Промо вилла 3 (1920)"},
+          {"name": "Ru_03-Villa-feed11.jpg", "description": "Промо вилла 3 (feed)"},
+          {"name": "Ru_04-Villa-192012.jpg", "description": "Промо вилла 4 (1920)"},
+          {"name": "Ru_04-Villa-feed13.jpg", "description": "Промо вилла 4 (feed)"}
+        ]
+      },
+
+      "renders": {
+        "video": {
+          "path": "Рендеры/Видео",
+          "files": [
+            {"name": "Rise AI.mp4", "description": "AI видео презентация"},
+            {"name": "Rise Villas.MOV", "description": "Видео презентация"}
+          ]
+        },
+        "exterior": {
+          "path": "Рендеры/Экстерьер ",
+          "_note": "ВАЖНО: пробел в конце 'Экстерьер '",
+          "hi_res": {
+            "path": "Рендеры/Экстерьер /Hi-Res",
+            "files": [
+              {"name": "CAM_001244.jpg", "description": "Вилла - главный вид"},
+              {"name": "CAM_003245.jpg", "description": "Вилла Тип 3 - вид спереди"},
+              {"name": "CAM_003_NIGHT246.jpg", "description": "Вилла Тип 3 - ночной вид"},
+              {"name": "CAM_004247.jpg", "description": "Таунхаус - вид спереди"},
+              {"name": "CAM_004_NIGHT248.jpg", "description": "Таунхаус - ночной вид"},
+              {"name": "CAM_005249.jpg", "description": "Общий вид комплекса (hero)"},
+              {"name": "CAM_006250.jpg", "description": "Вид на комплекс 2"},
+              {"name": "CAM_007251.jpg", "description": "Вид на комплекс 3"},
+              {"name": "CAM_TOP1_BIRD252.jpg", "description": "Вид сверху (bird view)"},
+              {"name": "CAM_TOP1_BIRD_NIGHT253.jpg", "description": "Вид сверху ночью"}
+            ]
+          },
+          "low_res": {
+            "path": "Рендеры/Экстерьер /Low-Res",
+            "files": [
+              {"name": "CAM_001254.jpg", "description": "Вилла - главный вид"},
+              {"name": "CAM_003255.jpg", "description": "Вилла Тип 3"},
+              {"name": "CAM_003_NIGHT256.jpg", "description": "Вилла Тип 3 - ночь"},
+              {"name": "CAM_004257.jpg", "description": "Таунхаус"},
+              {"name": "CAM_004_NIGHT258.jpg", "description": "Таунхаус - ночь"},
+              {"name": "CAM_005259.jpg", "description": "Общий вид"},
+              {"name": "CAM_006260.jpg", "description": "Вид 2"},
+              {"name": "CAM_007261.jpg", "description": "Вид 3"},
+              {"name": "CAM_TOP1_BIRD262.jpg", "description": "Вид сверху"},
+              {"name": "CAM_TOP1_BIRD_NIGHT263.jpg", "description": "Вид сверху ночью"}
+            ]
+          }
+        },
+        "interior": {
+          "villa_type3": {
+            "hi_res": {
+              "path": "Рендеры/Интерьер/Вилла Тип 3/Hi-Res",
+              "files": [
+                {"name": "114.jpg", "description": "Интерьер 1"},
+                {"name": "235.jpg", "description": "Интерьер 2"},
+                {"name": "353.jpg", "description": "Интерьер 3"},
+                {"name": "463.jpg", "description": "Интерьер 4"},
+                {"name": "565.jpg", "description": "Интерьер 5"},
+                {"name": "667.jpg", "description": "Интерьер 6"},
+                {"name": "769.jpg", "description": "Интерьер 7"},
+                {"name": "871.jpg", "description": "Интерьер 8"},
+                {"name": "973.jpg", "description": "Интерьер 9"},
+                {"name": "1015.jpg", "description": "Интерьер 10"},
+                {"name": "1117.jpg", "description": "Интерьер 11"},
+                {"name": "1219.jpg", "description": "Интерьер 12"},
+                {"name": "1321.jpg", "description": "Интерьер 13"},
+                {"name": "1423.jpg", "description": "Интерьер 14"},
+                {"name": "1525.jpg", "description": "Интерьер 15"},
+                {"name": "1627.jpg", "description": "Интерьер 16"},
+                {"name": "1729.jpg", "description": "Интерьер 17"},
+                {"name": "1831.jpg", "description": "Интерьер 18"},
+                {"name": "1933.jpg", "description": "Интерьер 19"},
+                {"name": "2036.jpg", "description": "Интерьер 20"},
+                {"name": "2137.jpg", "description": "Интерьер 21"},
+                {"name": "2238.jpg", "description": "Интерьер 22"},
+                {"name": "2340.jpg", "description": "Интерьер 23"},
+                {"name": "2442.jpg", "description": "Интерьер 24"},
+                {"name": "2543.jpg", "description": "Интерьер 25"},
+                {"name": "2644.jpg", "description": "Интерьер 26"},
+                {"name": "2746.jpg", "description": "Интерьер 27"},
+                {"name": "2848.jpg", "description": "Интерьер 28"},
+                {"name": "2950.jpg", "description": "Интерьер 29"},
+                {"name": "3054.jpg", "description": "Интерьер 30"},
+                {"name": "3156.jpg", "description": "Интерьер 31"},
+                {"name": "3258.jpg", "description": "Интерьер 32"},
+                {"name": "3360.jpg", "description": "Интерьер 33"},
+                {"name": "3461.jpg", "description": "Интерьер 34"}
+              ]
+            },
+            "low_res": {
+              "path": "Рендеры/Интерьер/Вилла Тип 3/Low-Res",
+              "file_count": 68,
+              "_note": "Low-res версии интерьеров Вилла Тип 3"
+            }
+          },
+          "townhouse": {
+            "hi_res": {
+              "path": "Рендеры/Интерьер/Таунхаус/Hi-Res",
+              "files": [
+                {"name": "1136.jpg", "description": "Интерьер 1"},
+                {"name": "2154.jpg", "description": "Интерьер 2"},
+                {"name": "3173.jpg", "description": "Интерьер 3"},
+                {"name": "4178.jpg", "description": "Интерьер 4"},
+                {"name": "5180.jpg", "description": "Интерьер 5"},
+                {"name": "6182.jpg", "description": "Интерьер 6"},
+                {"name": "7184.jpg", "description": "Интерьер 7"},
+                {"name": "8186.jpg", "description": "Интерьер 8"},
+                {"name": "9188.jpg", "description": "Интерьер 9"},
+                {"name": "10137.jpg", "description": "Интерьер 10"},
+                {"name": "11139.jpg", "description": "Интерьер 11"},
+                {"name": "12141.jpg", "description": "Интерьер 12"},
+                {"name": "13143.jpg", "description": "Интерьер 13"},
+                {"name": "14145.jpg", "description": "Интерьер 14"},
+                {"name": "15147.jpg", "description": "Интерьер 15"},
+                {"name": "16148.jpg", "description": "Интерьер 16"},
+                {"name": "18149.jpg", "description": "Интерьер 18"},
+                {"name": "19151.jpg", "description": "Интерьер 19"},
+                {"name": "20155.jpg", "description": "Интерьер 20"},
+                {"name": "21157.jpg", "description": "Интерьер 21"},
+                {"name": "22159.jpg", "description": "Интерьер 22"},
+                {"name": "23161.jpg", "description": "Интерьер 23"},
+                {"name": "24162.jpg", "description": "Интерьер 24"},
+                {"name": "25163.jpg", "description": "Интерьер 25"},
+                {"name": "26164.jpg", "description": "Интерьер 26"},
+                {"name": "27166.jpg", "description": "Интерьер 27"},
+                {"name": "28168.jpg", "description": "Интерьер 28"},
+                {"name": "29170.jpg", "description": "Интерьер 29"},
+                {"name": "30174.jpg", "description": "Интерьер 30"},
+                {"name": "31175.jpg", "description": "Интерьер 31"},
+                {"name": "32176.jpg", "description": "Интерьер 32"}
+              ]
+            },
+            "low_res": {
+              "path": "Рендеры/Интерьер/Таунхаус/Low-Res",
+              "file_count": 64,
+              "_note": "Low-res версии интерьеров Таунхауса"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "_usage": {
+    "description": "Генерация URL из пути файла",
+    "formula": "baseUrl + encodeURIComponent(basePath + '/' + category.path + '/' + file.name) + urlSuffix",
+    "example": {
+      "input": "Rise/Rise Villas/Рендеры/Экстерьер /Hi-Res/CAM_005249.jpg",
+      "output": "https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_005249.jpg?alt=media"
+    },
+    "important_notes": [
+      "Папка 'Экстерьер ' имеет пробел в конце!",
+      "Кириллица в URL кодируется в UTF-8",
+      "Пробелы кодируются как %20"
+    ]
+  },
+
+  "_quick_reference": {
+    "hero_image": "Рендеры/Экстерьер /Hi-Res/CAM_005249.jpg",
+    "villa_cards": {
+      "type1": "Рендеры/Экстерьер /Hi-Res/CAM_001244.jpg",
+      "type3": "Рендеры/Экстерьер /Hi-Res/CAM_003245.jpg",
+      "townhouse": "Рендеры/Экстерьер /Hi-Res/CAM_004247.jpg"
+    },
+    "night_views": [
+      "Рендеры/Экстерьер /Hi-Res/CAM_003_NIGHT246.jpg",
+      "Рендеры/Экстерьер /Hi-Res/CAM_004_NIGHT248.jpg",
+      "Рендеры/Экстерьер /Hi-Res/CAM_TOP1_BIRD_NIGHT253.jpg"
+    ],
+    "aerial_view": "Рендеры/Экстерьер /Hi-Res/CAM_TOP1_BIRD252.jpg",
+    "location_map": "Локация/Локация1 копия.jpg",
+    "masterplan": "Мастер план/Master Plan (unit types)2.jpg"
+  }
+}
