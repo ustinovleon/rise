@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rise Villas Phuket — Премиальные виллы на Пхукете | ROI до 14%</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Montserrat',sans-serif;background:#0D0D0D;color:#fff;line-height:1.6}
+        a{text-decoration:none;color:inherit}
+        img{max-width:100%;height:auto;display:block}
+        :root{--gold:#C9A962;--dark:#0D0D0D;--dark-gray:#1A1A1A}
+        .font-display{font-family:'Playfair Display',serif}
+        .text-gold{color:var(--gold)}
+        .text-green{color:#4ade80}
+        .text-gradient{background:linear-gradient(135deg,#C9A962,#E8D5A3,#C9A962);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .container{max-width:1280px;margin:0 auto;padding:0 1rem}
+        .flex{display:flex}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}
+        .items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}
+        .gap-2{gap:.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}
+        .grid{display:grid}.grid-2{grid-template-columns:repeat(2,1fr)}
+        .text-center{text-align:center}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.text-xl{font-size:1.25rem}.text-2xl{font-size:1.5rem}.text-3xl{font-size:1.875rem}.text-4xl{font-size:2.25rem}
+        .font-bold{font-weight:700}.font-semibold{font-weight:600}
+        .uppercase{text-transform:uppercase}.tracking-wide{letter-spacing:.1em}
+        .mb-2{margin-bottom:.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mb-12{margin-bottom:3rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.mx-auto{margin:0 auto}
+        .p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-6{padding:0 1.5rem}.py-3{padding:.75rem 0}.py-4{padding:1rem 0}.py-16{padding:4rem 0}.py-20{padding:5rem 0}.pt-20{padding-top:5rem}
+        .rounded-xl{border-radius:.75rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}
+        .overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}
+        .relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}
+        .inset-0{top:0;right:0;bottom:0;left:0}.z-10{z-index:10}.z-50{z-index:50}
+        .w-full{width:100%}.h-48{height:12rem}.h-56{height:14rem}.h-80{height:20rem}.min-h-screen{min-height:100vh}
+        .max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}
+        .object-cover{object-fit:cover}
+        .hidden{display:none}.block{display:block}.inline-flex{display:inline-flex}
+        .border-b{border-bottom:1px solid rgba(201,169,98,.1)}
+        .line-through{text-decoration:line-through}
+        .opacity-60{opacity:.6}.opacity-50{opacity:.5}.opacity-40{opacity:.4}
+        .transition{transition:all .3s}
+        .bg-dark{background:#0D0D0D}.bg-dark-gray{background:#1A1A1A}
+        .gradient-gold{background:linear-gradient(135deg,#C9A962,#E8D5A3,#A68B4B)}
+        .card{background:linear-gradient(145deg,rgba(26,26,26,.9),rgba(13,13,13,.95));border:1px solid rgba(201,169,98,.15);border-radius:1.5rem}
+        .stat-card{background:linear-gradient(145deg,rgba(201,169,98,.1),rgba(13,13,13,.95));border:1px solid rgba(201,169,98,.2);border-radius:1rem;padding:1.5rem;text-align:center}
+        .glow{box-shadow:0 0 60px rgba(201,169,98,.15)}
+        .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 2.5rem;border-radius:9999px;font-weight:600;font-size:1rem;transition:all .3s;cursor:pointer;border:none}
+        .btn-gold{background:linear-gradient(135deg,#C9A962,#E8D5A3,#A68B4B);color:#0D0D0D}
+        .btn-outline{border:1px solid rgba(201,169,98,.5);color:var(--gold);background:transparent}
+        .btn:hover{opacity:.9;transform:translateY(-2px)}
+        .badge{display:inline-block;padding:.25rem .75rem;border-radius:9999px;font-size:.75rem}
+        .badge-green{background:rgba(74,222,128,.2);color:#4ade80}
+        .badge-yellow{background:rgba(250,204,21,.2);color:#facc15}
+        .nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,13,13,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,169,98,.1)}
+        .nav-inner{max-width:1280px;margin:0 auto;padding:0 1rem;display:flex;justify-content:space-between;align-items:center;height:4rem}
+        .nav-links{display:none;align-items:center;gap:2rem}
+        .nav-link{color:rgba(255,255,255,.8);font-size:.875rem;font-weight:500;transition:color .3s}
+        .nav-link:hover{color:var(--gold)}
+        .mobile-menu{display:none;background:#1A1A1A;padding:1rem}
+        .mobile-menu.active{display:block}
+        .mobile-menu a{display:block;padding:.75rem 0;color:rgba(255,255,255,.8)}
+        #mobile-menu-btn{display:block;background:none;border:none;color:#fff;padding:.5rem;cursor:pointer}
+        .hero-bg{position:absolute;inset:0}
+        .hero-bg img{width:100%;height:100%;object-fit:cover}
+        .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(13,13,13,.7) 50%,#0D0D0D)}
+        .hero-dark{position:absolute;inset:0;background:rgba(13,13,13,.4)}
+        .villa-card{background:linear-gradient(145deg,rgba(26,26,26,.9),rgba(13,13,13,.95));border:1px solid rgba(201,169,98,.15);border-radius:1.5rem;overflow:hidden;transition:all .4s}
+        .villa-card:hover{transform:translateY(-5px);border-color:rgba(201,169,98,.5)}
+        .image-zoom{overflow:hidden}
+        .image-zoom img{transition:transform .6s}
+        .image-zoom:hover img{transform:scale(1.05)}
+        .calc-input{background:rgba(26,26,26,.8);border:1px solid rgba(201,169,98,.3);color:#fff;padding:.75rem 1rem;border-radius:.5rem;width:100%;font-size:1rem}
+        .calc-input:focus{outline:none;border-color:var(--gold)}
+        input[type=range]{width:100%;accent-color:var(--gold)}
+        .messenger{display:flex;align-items:center;justify-content:center;gap:.75rem;padding:1rem;border-radius:1rem;font-weight:600;color:#fff;transition:all .3s}
+        .messenger:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+        .wa{background:#25D366}.tg{background:#0088cc}.vk{background:#4C75A3}.max{background:#168DE2}
+        table{width:100%;border-collapse:collapse}
+        th,td{padding:.75rem .5rem;text-align:left}
+        th{color:var(--gold);font-weight:600;border-bottom:1px solid rgba(201,169,98,.3)}
+        tr{border-bottom:1px solid rgba(255,255,255,.1)}
+        tr:hover{background:rgba(201,169,98,.05)}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .animate{animation:fadeIn 1s ease-out}
+        @media(min-width:640px){.sm-grid-2{grid-template-columns:repeat(2,1fr)}.sm-flex-row{flex-direction:row}.sm-block{display:block}}
+        @media(min-width:768px){.nav-inner{height:5rem}.nav-links{display:flex}#mobile-menu-btn{display:none}.md-grid-2{grid-template-columns:repeat(2,1fr)}.md-grid-3{grid-template-columns:repeat(3,1fr)}.md-grid-4{grid-template-columns:repeat(4,1fr)}.md-text-5xl{font-size:3rem}.md-text-7xl{font-size:4.5rem}.md-p-8{padding:2rem}.md-p-12{padding:3rem}}
+        @media(min-width:1024px){.lg-grid-3{grid-template-columns:repeat(3,1fr)}.lg-grid-4{grid-template-columns:repeat(4,1fr)}.lg-text-8xl{font-size:6rem}}
+    </style>
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#"><img src="https://static.tildacdn.com/tild6538-6464-4535-b037-623436306565/RISE_Villas_white-ve.svg" alt="Rise Villas" style="height:2rem"></a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">О проекте</a>
+                <a href="#villas" class="nav-link">Виллы</a>
+                <a href="#prices" class="nav-link">Цены</a>
+                <a href="#calculator" class="nav-link">Калькулятор</a>
+                <a href="#location" class="nav-link">Локация</a>
+                <a href="#contact" class="btn btn-gold" style="padding:.625rem 1.5rem;font-size:.875rem">Связаться</a>
+            </div>
+            <button id="mobile-menu-btn"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#about">О проекте</a><a href="#villas">Виллы</a><a href="#prices">Цены</a><a href="#calculator">Калькулятор</a><a href="#location">Локация</a>
+            <a href="#contact" class="btn btn-gold w-full mt-4 text-center" style="margin-top:1rem;display:block">Связаться</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="hero-bg"><img src="https://thumb.tildacdn.com/tild6266-6230-4536-b863-353262363330/-/format/webp/CAM_TOP1_BIRD_2.jpg" alt="Rise Villas"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-dark"></div>
+        <div class="relative z-10 container text-center pt-20 animate">
+            <div class="inline-flex items-center gap-2" style="background:rgba(201,169,98,.1);border:1px solid rgba(201,169,98,.3);border-radius:9999px;padding:.5rem 1.5rem;margin-bottom:2rem">
+                <span class="text-gold text-sm font-semibold">🔥 Пресейл -20%</span>
+                <span style="color:rgba(255,255,255,.6)" class="text-sm">Специальные цены</span>
+            </div>
+            <h1 class="font-display text-4xl md-text-7xl lg-text-8xl font-bold mb-6"><span>Премиальные виллы</span><br><span class="text-gradient">на Пхукете</span></h1>
+            <p class="text-xl mb-4" style="color:rgba(255,255,255,.7);max-width:48rem;margin:0 auto">5-звёздочный сервис • Годовой ROI до 14% • Bang Tao Beach</p>
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <div class="text-center"><div class="text-3xl font-bold text-gold">9.9M</div><div class="text-sm" style="color:rgba(255,255,255,.5)">THB от</div></div>
+                <div style="width:1px;background:rgba(201,169,98,.3)" class="hidden sm-block"></div>
+                <div class="text-center"><div class="text-3xl font-bold text-gold">11.4%</div><div class="text-sm" style="color:rgba(255,255,255,.5)">ROI годовой</div></div>
+                <div style="width:1px;background:rgba(201,169,98,.3)" class="hidden sm-block"></div>
+                <div class="text-center"><div class="text-3xl font-bold text-gold">90%</div><div class="text-sm" style="color:rgba(255,255,255,.5)">Загрузка</div></div>
+            </div>
+            <div class="flex flex-col sm-flex-row gap-4 justify-center">
+                <a href="#contact" class="btn btn-gold">Получить презентацию →</a>
+                <a href="#villas" class="btn btn-outline">Смотреть виллы</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-16 bg-dark-gray">
+        <div class="container">
+            <div class="grid grid-2 md-grid-4 gap-6">
+                <div class="stat-card"><div class="text-4xl font-bold text-gold mb-2">+23%</div><div style="color:rgba(255,255,255,.6)" class="text-sm">Рост турпотока 2024</div></div>
+                <div class="stat-card"><div class="text-4xl font-bold text-gold mb-2">+21%</div><div style="color:rgba(255,255,255,.6)" class="text-sm">Долгосрочные визиты</div></div>
+                <div class="stat-card"><div class="text-4xl font-bold text-gold mb-2">15%</div><div style="color:rgba(255,255,255,.6)" class="text-sm">Доходность аренды</div></div>
+                <div class="stat-card"><div class="text-4xl font-bold text-gold mb-2">6</div><div style="color:rgba(255,255,255,.6)" class="text-sm">Место для экспатов</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20">
+        <div class="container">
+            <div class="text-center mb-12">
+                <span class="text-gold text-sm font-semibold uppercase tracking-wide">О проекте</span>
+                <h2 class="font-display text-3xl md-text-5xl font-bold mt-4 mb-6">Rise Villas — эстетика,<br><span class="text-gradient">превращённая в прибыль</span></h2>
+            </div>
+            <div class="grid md-grid-2 gap-8 mb-12">
+                <div class="image-zoom rounded-3xl overflow-hidden glow"><img src="https://thumb.tildacdn.com/tild3539-6333-4566-a661-316462353534/-/format/webp/CAM_003_2.jpg" alt="Rise Villas" style="width:100%;height:100%;object-fit:cover"></div>
+                <div class="grid grid-2 gap-4">
+                    <div class="image-zoom rounded-2xl overflow-hidden"><img src="https://thumb.tildacdn.com/tild3862-3039-4162-a237-643961393039/-/format/webp/4_2_1.jpg" class="w-full h-48 object-cover"></div>
+                    <div class="image-zoom rounded-2xl overflow-hidden"><img src="https://thumb.tildacdn.com/tild3662-6639-4037-a662-346164336536/-/format/webp/CAM_004_1.jpg" class="w-full h-48 object-cover"></div>
+                    <div class="image-zoom rounded-2xl overflow-hidden" style="grid-column:span 2"><img src="https://thumb.tildacdn.com/tild3861-3936-4636-b733-363432313465/-/format/webp/CAM_005_1.jpg" class="w-full h-48 object-cover"></div>
+                </div>
+            </div>
+            <div class="grid sm-grid-2 lg-grid-4 gap-6">
+                <div class="card p-6"><div class="gradient-gold rounded-xl flex items-center justify-center mb-4" style="width:3.5rem;height:3.5rem"><svg width="28" height="28" fill="none" stroke="#0D0D0D" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg></div><h3 class="text-lg font-semibold mb-2">Instagrammable интерьеры</h3><p style="color:rgba(255,255,255,.5)" class="text-sm">Дизайн повышает стоимость аренды</p></div>
+                <div class="card p-6"><div class="gradient-gold rounded-xl flex items-center justify-center mb-4" style="width:3.5rem;height:3.5rem"><svg width="28" height="28" fill="none" stroke="#0D0D0D" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><h3 class="text-lg font-semibold mb-2">5-звёздочный сервис</h3><p style="color:rgba(255,255,255,.5)" class="text-sm">24/7 охрана, ресепшн, уборка</p></div>
+                <div class="card p-6"><div class="gradient-gold rounded-xl flex items-center justify-center mb-4" style="width:3.5rem;height:3.5rem"><svg width="28" height="28" fill="none" stroke="#0D0D0D" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div><h3 class="text-lg font-semibold mb-2">Доходность до 14%</h3><p style="color:rgba(255,255,255,.5)" class="text-sm">Полное управление арендой</p></div>
+                <div class="card p-6"><div class="gradient-gold rounded-xl flex items-center justify-center mb-4" style="width:3.5rem;height:3.5rem"><svg width="28" height="28" fill="none" stroke="#0D0D0D" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg></div><h3 class="text-lg font-semibold mb-2">Bang Tao Beach</h3><p style="color:rgba(255,255,255,.5)" class="text-sm">Премиальная локация</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-16 bg-dark-gray">
+        <div class="container">
+            <div class="text-center mb-12"><span class="text-gold text-sm font-semibold uppercase tracking-wide">Интерьеры</span><h2 class="font-display text-3xl font-bold mt-4">Дизайн, который продаёт</h2></div>
+            <div class="grid grid-2 md-grid-4 gap-4">
+                <div class="image-zoom rounded-xl overflow-hidden"><img src="https://thumb.tildacdn.com/tild6639-6131-4565-b534-643435636235/-/format/webp/1_5.jpg" class="w-full h-48 object-cover"></div>
+                <div class="image-zoom rounded-xl overflow-hidden"><img src="https://thumb.tildacdn.com/tild6361-3666-4464-b265-383530313539/-/format/webp/image_36.jpg" class="w-full h-48 object-cover"></div>
+                <div class="image-zoom rounded-xl overflow-hidden"><img src="https://thumb.tildacdn.com/tild6238-3962-4533-a633-393037326232/-/format/webp/8_1.jpg" class="w-full h-48 object-cover"></div>
+                <div class="image-zoom rounded-xl overflow-hidden"><img src="https://thumb.tildacdn.com/tild3439-6239-4939-a463-663734646630/-/format/webp/2_3.jpg" class="w-full h-48 object-cover"></div>
+                <div class="image-zoom rounded-xl overflow-hidden"><img src="https://thumb.tildacdn.com/tild3633-3535-4264-b561-383837393738/-/format/webp/16.jpg" class="w-full h-48 object-cover"></div>
+                <div class="image-zoom rounded-xl overflow-hidden"><img src="https://thumb.tildacdn.com/tild3534-3264-4264-a434-326333353738/-/format/webp/27_1.jpg" class="w-full h-48 object-cover"></div>
+                <div class="image-zoom rounded-xl overflow-hidden"><img src="https://thumb.tildacdn.com/tild6661-6661-4337-a266-636365306463/-/format/webp/3_3.jpg" class="w-full h-48 object-cover"></div>
+                <div class="image-zoom rounded-xl overflow-hidden"><img src="https://thumb.tildacdn.com/tild3337-6336-4364-b836-376230616530/-/format/webp/2_2.jpg" class="w-full h-48 object-cover"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Villas -->
+    <section id="villas" class="py-20">
+        <div class="container">
+            <div class="text-center mb-12">
+                <span class="text-gold text-sm font-semibold uppercase tracking-wide">Типы вилл</span>
+                <h2 class="font-display text-3xl md-text-5xl font-bold mt-4 mb-6">Выберите свою <span class="text-gradient">идеальную виллу</span></h2>
+                <p style="color:rgba(255,255,255,.6);max-width:42rem;margin:0 auto">18 уникальных юнитов: таунхаусы и виллы 5 типов</p>
+            </div>
+            <div class="mb-12 card p-4 md-p-8">
+                <h3 class="text-xl font-semibold mb-6 text-center">Мастер-план проекта</h3>
+                <img src="https://thumb.tildacdn.com/tild6266-6565-4533-b033-366232373533/-/format/webp/9_2.jpg" alt="Master Plan" class="w-full rounded-2xl">
+            </div>
+            <div class="grid md-grid-2 lg-grid-3 gap-8">
+                <div class="villa-card"><div class="image-zoom"><img src="https://thumb.tildacdn.com/tild3036-3866-4138-a131-393663323236/-/format/webp/10_3.jpg" class="w-full h-56 object-cover"></div><div class="p-6"><div class="flex justify-between items-center mb-4"><div><h3 class="text-xl font-bold">Вилла Тип 1</h3><p class="text-gold text-sm">198 м²</p></div><span class="badge badge-green">Доступно</span></div><div class="grid grid-2 gap-4 mb-4 text-sm"><div><span style="color:rgba(255,255,255,.5)">Участок:</span> 166-170</div><div><span style="color:rgba(255,255,255,.5)">Внутри:</span> 127</div><div><span style="color:rgba(255,255,255,.5)">Спальни:</span> 2</div><div><span style="color:rgba(255,255,255,.5)">Ванные:</span> 3</div></div><div class="border-b" style="padding-top:1rem;border-color:rgba(201,169,98,.2)"><div style="color:rgba(255,255,255,.5)" class="text-sm line-through">15,875,000 THB</div><div class="text-2xl font-bold text-gold">12,700,000 THB</div><div class="text-green text-sm">Скидка: 3,175,000 THB</div></div></div></div>
+                <div class="villa-card"><div class="image-zoom"><img src="https://thumb.tildacdn.com/tild6134-6234-4966-b839-326533376532/-/format/webp/CAM_004_NIGHT_1.png" class="w-full h-56 object-cover"></div><div class="p-6"><div class="flex justify-between items-center mb-4"><div><h3 class="text-xl font-bold">Вилла Тип 2</h3><p class="text-gold text-sm">193 м²</p></div><span class="badge badge-green">Доступно</span></div><div class="grid grid-2 gap-4 mb-4 text-sm"><div><span style="color:rgba(255,255,255,.5)">Участок:</span> 155</div><div><span style="color:rgba(255,255,255,.5)">Внутри:</span> 125</div><div><span style="color:rgba(255,255,255,.5)">Спальни:</span> 2</div><div><span style="color:rgba(255,255,255,.5)">Ванные:</span> 3</div></div><div class="border-b" style="padding-top:1rem;border-color:rgba(201,169,98,.2)"><div style="color:rgba(255,255,255,.5)" class="text-sm line-through">15,625,000 THB</div><div class="text-2xl font-bold text-gold">12,500,000 THB</div><div class="text-green text-sm">Скидка: 3,125,000 THB</div></div></div></div>
+                <div class="villa-card"><div class="image-zoom"><img src="https://thumb.tildacdn.com/tild6366-3164-4830-b738-346665356235/-/format/webp/12_1.jpg" class="w-full h-56 object-cover"></div><div class="p-6"><div class="flex justify-between items-center mb-4"><div><h3 class="text-xl font-bold">Вилла Тип 3</h3><p class="text-gold text-sm">222-248 м²</p></div><span class="badge badge-green">Доступно</span></div><div class="grid grid-2 gap-4 mb-4 text-sm"><div><span style="color:rgba(255,255,255,.5)">Участок:</span> 179-211</div><div><span style="color:rgba(255,255,255,.5)">Внутри:</span> 129</div><div><span style="color:rgba(255,255,255,.5)">Спальни:</span> 2</div><div><span style="color:rgba(255,255,255,.5)">Ванные:</span> 3</div></div><div class="border-b" style="padding-top:1rem;border-color:rgba(201,169,98,.2)"><div style="color:rgba(255,255,255,.5)" class="text-sm line-through">от 16,125,000 THB</div><div class="text-2xl font-bold text-gold">от 12,900,000 THB</div><div class="text-green text-sm">Скидка: до 3,350,000 THB</div></div></div></div>
+                <div class="villa-card"><div class="image-zoom"><img src="https://thumb.tildacdn.com/tild6236-6135-4435-b166-613533306162/-/format/webp/14.jpg" class="w-full h-56 object-cover"></div><div class="p-6"><div class="flex justify-between items-center mb-4"><div><h3 class="text-xl font-bold">Вилла Тип 4</h3><p class="text-gold text-sm">192-193 м²</p></div><span class="badge badge-yellow">Резерв</span></div><div class="grid grid-2 gap-4 mb-4 text-sm"><div><span style="color:rgba(255,255,255,.5)">Участок:</span> 154-176</div><div><span style="color:rgba(255,255,255,.5)">Внутри:</span> 113</div><div><span style="color:rgba(255,255,255,.5)">Спальни:</span> 2</div><div><span style="color:rgba(255,255,255,.5)">Ванные:</span> 3</div></div><div class="border-b" style="padding-top:1rem;border-color:rgba(201,169,98,.2)"><div style="color:rgba(255,255,255,.5)" class="text-sm line-through">от 14,125,000 THB</div><div class="text-2xl font-bold text-gold">от 11,300,000 THB</div><div class="text-green text-sm">Скидка: до 2,925,000 THB</div></div></div></div>
+                <div class="villa-card"><div class="image-zoom"><img src="https://thumb.tildacdn.com/tild3631-3135-4265-b936-323938643065/-/format/webp/10.jpg" class="w-full h-56 object-cover"></div><div class="p-6"><div class="flex justify-between items-center mb-4"><div><h3 class="text-xl font-bold">Вилла Тип 5</h3><p class="text-gold text-sm">240-255 м²</p></div><span class="badge badge-green">Доступно</span></div><div class="grid grid-2 gap-4 mb-4 text-sm"><div><span style="color:rgba(255,255,255,.5)">Участок:</span> 210-228</div><div><span style="color:rgba(255,255,255,.5)">Внутри:</span> 141</div><div><span style="color:rgba(255,255,255,.5)">Спальни:</span> 2</div><div><span style="color:rgba(255,255,255,.5)">Ванные:</span> 3</div></div><div class="border-b" style="padding-top:1rem;border-color:rgba(201,169,98,.2)"><div style="color:rgba(255,255,255,.5)" class="text-sm line-through">от 17,625,000 THB</div><div class="text-2xl font-bold text-gold">от 14,100,000 THB</div><div class="text-green text-sm">Скидка: до 3,625,000 THB</div></div></div></div>
+                <div class="villa-card"><div class="image-zoom"><img src="https://thumb.tildacdn.com/tild6631-6463-4461-b332-356565323834/-/format/webp/14_1.jpg" class="w-full h-56 object-cover"></div><div class="p-6"><div class="flex justify-between items-center mb-4"><div><h3 class="text-xl font-bold">Таунхаус</h3><p class="text-gold text-sm">162-183 м²</p></div><span class="badge badge-green">Доступно</span></div><div class="grid grid-2 gap-4 mb-4 text-sm"><div><span style="color:rgba(255,255,255,.5)">Участок:</span> 116-200</div><div><span style="color:rgba(255,255,255,.5)">Внутри:</span> 104</div><div><span style="color:rgba(255,255,255,.5)">Спальни:</span> 2</div><div><span style="color:rgba(255,255,255,.5)">Ванные:</span> 3</div></div><div class="border-b" style="padding-top:1rem;border-color:rgba(201,169,98,.2)"><div style="color:rgba(255,255,255,.5)" class="text-sm line-through">от 12,375,000 THB</div><div class="text-2xl font-bold text-gold">от 9,900,000 THB</div><div class="text-green text-sm">Скидка: до 2,800,000 THB</div></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prices -->
+    <section id="prices" class="py-20 bg-dark-gray">
+        <div class="container">
+            <div class="text-center mb-12">
+                <span class="text-gold text-sm font-semibold uppercase tracking-wide">Прайс-лист</span>
+                <h2 class="font-display text-3xl font-bold mt-4 mb-4">Полный каталог <span class="text-gradient">юнитов</span></h2>
+            </div>
+            <div class="card p-4 md-p-8 overflow-x-auto">
+                <table>
+                    <thead><tr><th>№</th><th>Тип</th><th style="text-align:center">Участок</th><th style="text-align:center">Внутри</th><th style="text-align:center">Общая</th><th style="text-align:right">Обычная</th><th style="text-align:right">Пресейл</th><th style="text-align:center">Статус</th></tr></thead>
+                    <tbody>
+                        <tr><td>1</td><td>Вилла Тип 1</td><td style="text-align:center">166</td><td style="text-align:center">127</td><td style="text-align:center">198</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">15,875,000</td><td style="text-align:right" class="text-gold font-semibold">12,700,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>2</td><td>Вилла Тип 1</td><td style="text-align:center">170</td><td style="text-align:center">127</td><td style="text-align:center">208</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">15,875,000</td><td style="text-align:right" class="text-gold font-semibold">12,700,000</td><td style="text-align:center"><span class="badge badge-yellow">Резерв</span></td></tr>
+                        <tr><td>3</td><td>Вилла Тип 4</td><td style="text-align:center">154</td><td style="text-align:center">113</td><td style="text-align:center">192</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">14,125,000</td><td style="text-align:right" class="text-gold font-semibold">11,300,000</td><td style="text-align:center"><span class="badge badge-yellow">Резерв</span></td></tr>
+                        <tr><td>4</td><td>Вилла Тип 3</td><td style="text-align:center">180</td><td style="text-align:center">129</td><td style="text-align:center">221</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">16,125,000</td><td style="text-align:right" class="text-gold font-semibold">12,900,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>5</td><td>Вилла Тип 2</td><td style="text-align:center">155</td><td style="text-align:center">125</td><td style="text-align:center">193</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">15,625,000</td><td style="text-align:right" class="text-gold font-semibold">12,500,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>6</td><td>Вилла Тип 3</td><td style="text-align:center">179</td><td style="text-align:center">129</td><td style="text-align:center">222</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">16,125,000</td><td style="text-align:right" class="text-gold font-semibold">12,900,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>7</td><td>Вилла Тип 2</td><td style="text-align:center">155</td><td style="text-align:center">125</td><td style="text-align:center">193</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">15,625,000</td><td style="text-align:right" class="text-gold font-semibold">12,500,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>8</td><td>Вилла Тип 3</td><td style="text-align:center">193</td><td style="text-align:center">129</td><td style="text-align:center">228</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">16,375,000</td><td style="text-align:right" class="text-gold font-semibold">13,100,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>9</td><td>Вилла Тип 2</td><td style="text-align:center">155</td><td style="text-align:center">125</td><td style="text-align:center">193</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">15,625,000</td><td style="text-align:right" class="text-gold font-semibold">12,500,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>10</td><td>Вилла Тип 3</td><td style="text-align:center">211</td><td style="text-align:center">129</td><td style="text-align:center">248</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">16,750,000</td><td style="text-align:right" class="text-gold font-semibold">13,400,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>11</td><td>Вилла Тип 2</td><td style="text-align:center">155</td><td style="text-align:center">125</td><td style="text-align:center">193</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">15,625,000</td><td style="text-align:right" class="text-gold font-semibold">12,500,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>12</td><td>Вилла Тип 5</td><td style="text-align:center">210</td><td style="text-align:center">141</td><td style="text-align:center">240</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">17,625,000</td><td style="text-align:right" class="text-gold font-semibold">14,100,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>13</td><td>Вилла Тип 4</td><td style="text-align:center">176</td><td style="text-align:center">113</td><td style="text-align:center">193</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">14,625,000</td><td style="text-align:right" class="text-gold font-semibold">11,700,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>14</td><td>Вилла Тип 5</td><td style="text-align:center">228</td><td style="text-align:center">141</td><td style="text-align:center">255</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">18,125,000</td><td style="text-align:right" class="text-gold font-semibold">14,500,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>15</td><td>Таунхаус</td><td style="text-align:center">116</td><td style="text-align:center">104</td><td style="text-align:center">162</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">12,375,000</td><td style="text-align:right" class="text-gold font-semibold">9,900,000</td><td style="text-align:center"><span class="badge badge-yellow">Резерв</span></td></tr>
+                        <tr><td>16</td><td>Таунхаус</td><td style="text-align:center">116</td><td style="text-align:center">104</td><td style="text-align:center">162</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">13,125,000</td><td style="text-align:right" class="text-gold font-semibold">10,500,000</td><td style="text-align:center"><span class="badge badge-yellow">Резерв</span></td></tr>
+                        <tr><td>17</td><td>Таунхаус</td><td style="text-align:center">117</td><td style="text-align:center">104</td><td style="text-align:center">162</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">13,125,000</td><td style="text-align:right" class="text-gold font-semibold">10,500,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                        <tr><td>18</td><td>Таунхаус</td><td style="text-align:center">200</td><td style="text-align:center">104</td><td style="text-align:center">183</td><td style="text-align:right;color:rgba(255,255,255,.5)" class="line-through">14,000,000</td><td style="text-align:right" class="text-gold font-semibold">11,200,000</td><td style="text-align:center"><span class="badge badge-green">Доступно</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-8 card p-6">
+                <h4 class="font-semibold text-gold mb-4">Мебельный пакет</h4>
+                <div class="grid sm-grid-2 gap-4 text-sm"><div class="flex justify-between"><span style="color:rgba(255,255,255,.6)">Таунхаус:</span><span class="font-semibold">750,000 THB</span></div><div class="flex justify-between"><span style="color:rgba(255,255,255,.6)">Вилла:</span><span class="font-semibold">950,000 THB</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" class="py-20">
+        <div class="container max-w-4xl">
+            <div class="text-center mb-12"><span class="text-gold text-sm font-semibold uppercase tracking-wide">Инвестиции</span><h2 class="font-display text-3xl font-bold mt-4">Калькулятор <span class="text-gradient">доходности</span></h2></div>
+            <div class="card p-8 glow">
+                <div class="grid md-grid-2 gap-8">
+                    <div style="display:flex;flex-direction:column;gap:1.5rem">
+                        <div><label style="display:block;font-size:.875rem;color:rgba(255,255,255,.6);margin-bottom:.5rem">Тип недвижимости</label><select id="propertyType" class="calc-input" onchange="calculateROI()"><option value="9900000">Таунхаус — 9,900,000 THB</option><option value="11300000">Вилла Тип 4 — 11,300,000 THB</option><option value="12500000">Вилла Тип 2 — 12,500,000 THB</option><option value="12700000">Вилла Тип 1 — 12,700,000 THB</option><option value="12900000">Вилла Тип 3 — 12,900,000 THB</option><option value="14100000">Вилла Тип 5 — 14,100,000 THB</option></select></div>
+                        <div><label style="display:block;font-size:.875rem;color:rgba(255,255,255,.6);margin-bottom:.5rem">Загрузка (%)</label><input type="range" id="occupancy" min="60" max="95" value="80" oninput="updateOccupancy();calculateROI()"><div class="flex justify-between text-sm mt-4" style="color:rgba(255,255,255,.4)"><span>60%</span><span id="occupancyValue" class="text-gold font-semibold">80%</span><span>95%</span></div></div>
+                        <div><label style="display:block;font-size:.875rem;color:rgba(255,255,255,.6);margin-bottom:.5rem">Цена аренды/сутки (THB)</label><input type="number" id="dailyRate" value="8500" class="calc-input" oninput="calculateROI()"></div>
+                        <div><label style="display:block;font-size:.875rem;color:rgba(255,255,255,.6);margin-bottom:.5rem">Срок владения</label><select id="holdingPeriod" class="calc-input" onchange="calculateROI()"><option value="1">1 год</option><option value="3">3 года</option><option value="5" selected>5 лет</option><option value="10">10 лет</option></select></div>
+                    </div>
+                    <div style="background:rgba(13,13,13,.5);border-radius:1rem;padding:1.5rem">
+                        <h3 class="text-lg font-semibold text-gold mb-6">Прогноз доходности</h3>
+                        <div style="display:flex;flex-direction:column;gap:.5rem">
+                            <div class="flex justify-between items-center py-3 border-b"><span style="color:rgba(255,255,255,.6)">Годовой доход</span><span id="annualIncome" class="text-xl font-bold text-gold">0 THB</span></div>
+                            <div class="flex justify-between items-center py-3 border-b"><span style="color:rgba(255,255,255,.6)">Расходы (15%)</span><span id="annualExpenses">0 THB</span></div>
+                            <div class="flex justify-between items-center py-3 border-b"><span style="color:rgba(255,255,255,.6)">Чистый доход</span><span id="netIncome" class="text-xl font-bold text-green">0 THB</span></div>
+                            <div class="flex justify-between items-center py-3 border-b"><span style="color:rgba(255,255,255,.6)">ROI годовой</span><span id="roiPercent" class="text-2xl font-bold text-gold">0%</span></div>
+                            <div class="flex justify-between items-center py-3"><span style="color:rgba(255,255,255,.6)">Доход за <span id="periodText">5</span> лет</span><span id="totalIncome" class="text-2xl font-bold text-green">0 THB</span></div>
+                        </div>
+                        <div style="background:rgba(201,169,98,.1);border-radius:.75rem;padding:1rem;margin-top:1rem" class="flex items-center gap-2 text-gold text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>При 90% загрузке возможен ROI до 14%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="py-20 bg-dark-gray">
+        <div class="container">
+            <div class="text-center mb-12"><span class="text-gold text-sm font-semibold uppercase tracking-wide">Локация</span><h2 class="font-display text-3xl font-bold mt-4">Bang Tao — <span class="text-gradient">сердце Пхукета</span></h2></div>
+            <div class="grid md-grid-2 gap-8 mb-12">
+                <div class="image-zoom rounded-3xl overflow-hidden"><img src="https://thumb.tildacdn.com/tild3331-3663-4864-b162-366537333165/-/format/webp/Rectangle_40_1.jpg" class="w-full h-80 object-cover"></div>
+                <div class="grid grid-2 gap-4">
+                    <div class="card p-4"><div style="font-size:1.5rem;margin-bottom:.5rem">🏖️</div><div class="font-semibold">Пляж Bang Tao</div><div style="color:rgba(255,255,255,.5)" class="text-sm">Лучшие закаты</div></div>
+                    <div class="card p-4"><div style="font-size:1.5rem;margin-bottom:.5rem">🍽️</div><div class="font-semibold">Рестораны</div><div style="color:rgba(255,255,255,.5)" class="text-sm">Кухни мира</div></div>
+                    <div class="card p-4"><div style="font-size:1.5rem;margin-bottom:.5rem">🏋️</div><div class="font-semibold">Спорт</div><div style="color:rgba(255,255,255,.5)" class="text-sm">Гольф, падел</div></div>
+                    <div class="card p-4"><div style="font-size:1.5rem;margin-bottom:.5rem">💆</div><div class="font-semibold">Велнес</div><div style="color:rgba(255,255,255,.5)" class="text-sm">SPA и массаж</div></div>
+                    <div class="card p-4"><div style="font-size:1.5rem;margin-bottom:.5rem">💼</div><div class="font-semibold">Бизнес</div><div style="color:rgba(255,255,255,.5)" class="text-sm">Коворкинги</div></div>
+                    <div class="card p-4"><div style="font-size:1.5rem;margin-bottom:.5rem">🌴</div><div class="font-semibold">Природа</div><div style="color:rgba(255,255,255,.5)" class="text-sm">Джунгли</div></div>
+                </div>
+            </div>
+            <div class="text-center"><a href="https://maps.app.goo.gl/dM1eCiFkjUr1cvPTA" target="_blank" class="btn btn-gold">📍 Открыть на Google Maps →</a></div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0" style="opacity:.1"><img src="https://thumb.tildacdn.com/tild3964-6230-4032-a361-356337613432/-/format/webp/CAM_TOP1_BIRD_NIGHT.jpg" style="width:100%;height:100%;object-fit:cover"></div>
+        <div class="absolute inset-0" style="background:linear-gradient(to bottom,#0D0D0D,rgba(13,13,13,.95),#0D0D0D)"></div>
+        <div class="container max-w-4xl relative">
+            <div class="text-center mb-12"><span class="text-gold text-sm font-semibold uppercase tracking-wide">Связаться</span><h2 class="font-display text-3xl md-text-5xl font-bold mt-4 mb-4">Получите <span class="text-gradient">консультацию</span></h2><p style="color:rgba(255,255,255,.6);max-width:36rem;margin:0 auto">Выберите удобный способ связи</p></div>
+            <div class="card p-8 md-p-12 glow">
+                <div class="text-center mb-8"><h3 class="text-2xl font-bold mb-2">Свяжитесь со мной</h3><p style="color:rgba(255,255,255,.6)">Леонид Устинов — Kalinka Thailand</p></div>
+                <div class="grid sm-grid-2 lg-grid-4 gap-4 mb-8">
+                    <a href="https://wa.me/66822566388?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20Rise%20Villas" target="_blank" class="messenger wa"><svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
+                    <a href="https://t.me/leonidustinov?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20Rise%20Villas" target="_blank" class="messenger tg"><svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>Telegram</a>
+                    <a href="https://vk.me/ustinov.leonid" target="_blank" class="messenger vk"><svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg>VK</a>
+                    <a href="https://max.ru/u/f9LHodD0cOLgh6PD1mwDP1GNPXH5tuCC6aVYW3HDy2g8DrZLHujAd7Zp5KY" target="_blank" class="messenger max"><svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>MAX</a>
+                </div>
+                <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,169,98,.5),transparent);margin:2rem 0"></div>
+                <div class="text-center"><p style="color:rgba(255,255,255,.4);font-size:.875rem;margin-bottom:1rem">Или позвоните напрямую</p><a href="tel:+66822566388" class="inline-flex items-center gap-2 text-2xl font-bold text-gold"><svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>+66 82 256 6388</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-b" style="border-color:rgba(201,169,98,.1)">
+        <div class="container">
+            <div class="flex flex-col items-center gap-6 text-center">
+                <div class="flex items-center gap-4"><img src="https://static.tildacdn.com/tild6538-6464-4535-b037-623436306565/RISE_Villas_white-ve.svg" alt="Rise Villas" style="height:2rem"><span style="color:rgba(255,255,255,.4)">×</span><span class="text-gold font-semibold">Kalinka Thailand</span></div>
+                <div class="flex items-center gap-6">
+                    <a href="https://wa.me/66822566388" target="_blank" style="color:rgba(255,255,255,.5);transition:color .3s"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    <a href="https://t.me/leonidustinov" target="_blank" style="color:rgba(255,255,255,.5);transition:color .3s"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+                    <a href="https://vk.me/ustinov.leonid" target="_blank" style="color:rgba(255,255,255,.5);transition:color .3s"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg></a>
+                </div>
+                <div style="color:rgba(255,255,255,.4);font-size:.875rem">© 2025 Rise Villas. Все права защищены.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('active')});
+    document.querySelectorAll('#mobile-menu a').forEach(function(l){l.addEventListener('click',function(){document.getElementById('mobile-menu').classList.remove('active')})});
+    function updateOccupancy(){document.getElementById('occupancyValue').textContent=document.getElementById('occupancy').value+'%'}
+    function calculateROI(){var p=parseInt(document.getElementById('propertyType').value),o=parseInt(document.getElementById('occupancy').value)/100,r=parseInt(document.getElementById('dailyRate').value)||0,h=parseInt(document.getElementById('holdingPeriod').value),a=Math.round(r*o*365),e=Math.round(a*.15),n=a-e,roi=((n/p)*100).toFixed(1),t=n*h;function f(x){return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')}document.getElementById('annualIncome').textContent=f(a)+' THB';document.getElementById('annualExpenses').textContent='-'+f(e)+' THB';document.getElementById('netIncome').textContent=f(n)+' THB';document.getElementById('roiPercent').textContent=roi+'%';document.getElementById('periodText').textContent=h;document.getElementById('totalIncome').textContent=f(t)+' THB'}
+    calculateROI();
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'})})});
+    </script>
+</body>
+</html>
