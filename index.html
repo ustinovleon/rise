@@ -158,8 +158,16 @@
         .footer-bottom{padding-top:32px;border-top:1px solid var(--border);text-align:center;color:var(--text-gray);font-size:14px}
         
         /* Mobile Menu */
-        .mobile-menu-btn{display:none;width:40px;height:40px;border:1px solid var(--border);border-radius:8px;background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer}
+        .mobile-menu-btn{display:none;width:40px;height:40px;border:1px solid var(--border);border-radius:8px;background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;z-index:101}
         .mobile-menu-btn span{width:20px;height:2px;background:var(--primary);transition:.3s}
+        .mobile-menu-btn.active span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+        .mobile-menu-btn.active span:nth-child(2){opacity:0}
+        .mobile-menu-btn.active span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+        .mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,.98);z-index:100;padding-top:120px;opacity:0;transition:opacity .3s ease}
+        .mobile-nav.open{display:flex;opacity:1}
+        .mobile-nav ul{display:flex;flex-direction:column;align-items:center;gap:24px;list-style:none;width:100%}
+        .mobile-nav a{font-size:20px;font-weight:600;color:var(--primary);padding:12px 24px}
+        .mobile-nav a:hover{color:var(--accent)}
         
         /* Responsive */
         @media(max-width:1024px){
@@ -226,6 +234,19 @@
             </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#villas" class="mobile-nav-link">Виллы</a></li>
+            <li><a href="#pricelist" class="mobile-nav-link">Прайс-лист</a></li>
+            <li><a href="#payment" class="mobile-nav-link">Оплата</a></li>
+            <li><a href="#calculator" class="mobile-nav-link">ROI</a></li>
+            <li><a href="#location" class="mobile-nav-link">Локация</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Контакты</a></li>
+            <li><a href="#contact" class="btn btn-primary" style="margin-top:16px">Получить консультацию</a></li>
+        </ul>
+    </div>
 
     <!-- Hero -->
     <section class="hero">
@@ -949,6 +970,25 @@
                 if(target){
                     target.scrollIntoView({behavior: 'smooth', block: 'start'});
                 }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.getElementById('mobileNav');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileNav.classList.toggle('open');
+            document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking on nav links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuBtn.classList.remove('active');
+                mobileNav.classList.remove('open');
+                document.body.style.overflow = '';
             });
         });
     </script>
