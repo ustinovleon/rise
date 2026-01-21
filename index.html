@@ -224,7 +224,7 @@
         .location{background:var(--bg-light)}
         .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
         .location-image{border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.1)}
-        .location-image img{width:100%;height:400px;object-fit:cover}
+        .location-image img{width:100%;height:auto}
         .location-list{display:flex;flex-direction:column;gap:16px}
         .location-item{display:flex;gap:16px;padding:16px;background:#fff;border-radius:12px;border:1px solid var(--border);transition:.2s}
         .location-item:hover{border-color:var(--accent);transform:translateX(4px)}
@@ -261,8 +261,7 @@
         .gallery-item{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:1;cursor:pointer;background:rgba(255,255,255,.05)}
         .gallery-item img{width:100%;height:100%;object-fit:cover;transition:.4s}
         .gallery-item:hover img{transform:scale(1.1)}
-        .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,transparent 60%);opacity:0;transition:.3s;display:flex;flex-direction:column;justify-content:flex-end;padding:12px}
-        .gallery-item:hover .gallery-overlay{opacity:1}
+        .gallery-overlay{display:none}
         .gallery-label{color:#fff;font-size:12px;font-weight:600}
         .gallery-sublabel{color:rgba(255,255,255,.7);font-size:10px;margin-top:2px}
         .instagram-badge{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);padding:5px 10px;border-radius:12px;display:flex;align-items:center;gap:4px;font-size:9px;color:#fff;font-weight:600;text-transform:uppercase;letter-spacing:.3px}
@@ -473,12 +472,12 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-img">
-                        <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=400&h=300&fit=crop" alt="Пляж Пхукета" loading="lazy">
+                        <img src="https://phuketbuyhouse.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzU4MTIyLCJwdXIiOiJibG9iX2lkIn19--aa03413ba033ea2375a53269d3de2444819e7920/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2xpbWl0IjpbODUwLG51bGxdfSwicHVyIjoidmFyaWF0aW9uIn19--2ab92abb8de8f0b1acb0b62d7eb1f6a9f10890a3/Bangtao-beach-1024x473.jpg" alt="Пляж Банг Тао" loading="lazy">
                     </div>
                     <div class="feature-body">
                         <div class="feature-icon">📍</div>
                         <h3>Пляж Банг Тао</h3>
-                        <p>5 минут до лучшего пляжа острова, рядом Laguna Phuket и гольф-клуб</p>
+                        <p>10 минут до лучшего пляжа острова, рядом Laguna Phuket и гольф-клуб</p>
                     </div>
                 </div>
                 <div class="feature-card">
@@ -1129,7 +1128,7 @@
                         <div class="location-icon">🏖️</div>
                         <div class="location-info">
                             <h4>Пляж Банг Тао</h4>
-                            <p>5 минут до пляжа протяженностью 6 км</p>
+                            <p>10 минут до пляжа протяженностью 6 км</p>
                         </div>
                     </div>
                     <div class="location-item">
