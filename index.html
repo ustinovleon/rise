@@ -196,6 +196,14 @@
         .cost-row:last-child{margin-bottom:0}
         .cost-row span{font-size:14px;color:var(--text-secondary)}
         .cost-row strong{font-size:14px;font-weight:600}
+        .cost-row.highlight{background:var(--accent-light);border:1px solid var(--accent)}
+        .cost-row.highlight span,.cost-row.highlight strong{color:var(--accent);font-weight:600}
+        .ownership-options{display:flex;flex-direction:column;gap:16px}
+        .ownership-option{background:#fff;border-radius:12px;padding:16px;border:1px solid var(--border)}
+        .ownership-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+        .ownership-number{width:28px;height:28px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
+        .ownership-header h4{font-size:15px;font-weight:600;margin:0}
+        .ownership-note{font-size:12px;color:var(--text-muted);margin-bottom:12px;padding:8px 12px;background:var(--bg-light);border-radius:6px}
 
         /* Investment */
         .investment{background:var(--bg-dark);color:#fff}
@@ -992,13 +1000,39 @@
                     </div>
                 </div>
                 <div class="costs-card">
-                    <h3>Дополнительные расходы</h3>
-                    <div class="cost-group">
-                        <h4>Оформление собственности</h4>
-                        <div class="cost-row"><span>Leasehold (земля + вилла)</span><strong>1.1%</strong></div>
-                        <div class="cost-row"><span>Freehold (земля + вилла)</span><strong>6.3%</strong></div>
+                    <h3>Варианты оформления собственности</h3>
+                    <div class="ownership-options">
+                        <div class="ownership-option">
+                            <div class="ownership-header">
+                                <span class="ownership-number">1</span>
+                                <h4>Земля и вилла — Freehold</h4>
+                            </div>
+                            <p class="ownership-note">Доступно только для тайских физических и юридических лиц</p>
+                            <div class="cost-row"><span>Общий сбор</span><strong>6,3%</strong></div>
+                            <div class="cost-row"><span>Условия</span><strong>50/50 с застройщиком</strong></div>
+                            <div class="cost-row highlight"><span>Итого к оплате</span><strong>3,15%</strong></div>
+                        </div>
+                        <div class="ownership-option">
+                            <div class="ownership-header">
+                                <span class="ownership-number">2</span>
+                                <h4>Земля и вилла — Leasehold</h4>
+                            </div>
+                            <div class="cost-row"><span>Общий сбор</span><strong>1,1%</strong></div>
+                            <div class="cost-row"><span>Условия</span><strong>50/50 с застройщиком</strong></div>
+                            <div class="cost-row highlight"><span>Итого к оплате</span><strong>0,55%</strong></div>
+                        </div>
+                        <div class="ownership-option">
+                            <div class="ownership-header">
+                                <span class="ownership-number">3</span>
+                                <h4>Земля — Leasehold / Вилла — Freehold</h4>
+                            </div>
+                            <div class="cost-row"><span>Сбор на землю</span><strong>1,1%</strong></div>
+                            <div class="cost-row"><span>Сбор на строение</span><strong>6,3%</strong></div>
+                            <div class="cost-row"><span>Условия</span><strong>50/50 для каждой части</strong></div>
+                            <div class="cost-row highlight"><span>Итого к оплате</span><strong>0,55% + 3,15%</strong></div>
+                        </div>
                     </div>
-                    <div class="cost-group">
+                    <div class="cost-group" style="margin-top:24px">
                         <h4>Единоразовые платежи</h4>
                         <div class="cost-row"><span>Амортизационный фонд</span><strong>160,000 ฿</strong></div>
                         <div class="cost-row"><span>Установка счетчиков</span><strong>20,000 ฿</strong></div>
