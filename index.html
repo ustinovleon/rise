@@ -196,6 +196,14 @@
         .cost-row:last-child{margin-bottom:0}
         .cost-row span{font-size:14px;color:var(--text-secondary)}
         .cost-row strong{font-size:14px;font-weight:600}
+        .cost-row.highlight{background:var(--accent-light);border:1px solid var(--accent)}
+        .cost-row.highlight span,.cost-row.highlight strong{color:var(--accent);font-weight:600}
+        .ownership-options{display:flex;flex-direction:column;gap:16px}
+        .ownership-option{background:#fff;border-radius:12px;padding:16px;border:1px solid var(--border)}
+        .ownership-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+        .ownership-number{width:28px;height:28px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
+        .ownership-header h4{font-size:15px;font-weight:600;margin:0}
+        .ownership-note{font-size:12px;color:var(--text-muted);margin-bottom:12px;padding:8px 12px;background:var(--bg-light);border-radius:6px}
 
         /* Investment */
         .investment{background:var(--bg-dark);color:#fff}
@@ -229,6 +237,9 @@
         .result-row .value{font-size:16px;font-weight:600}
         .result-row .value.positive{color:var(--success)}
         .result-row .value.accent{color:var(--accent)}
+        .result-row.expense{background:rgba(0,0,0,.02);margin:0 -16px;padding:10px 16px;border-bottom:none}
+        .result-row.expense .label{font-size:13px}
+        .result-row.expense .value{font-size:14px;color:var(--text-muted)}
         .result-total{margin-top:24px;padding:20px;background:var(--accent-light);border-radius:12px;display:flex;justify-content:space-between;align-items:center}
         .result-total .label{font-size:14px;font-weight:500}
         .result-total .value{font-size:24px;font-weight:700;color:var(--accent)}
@@ -992,13 +1003,39 @@
                     </div>
                 </div>
                 <div class="costs-card">
-                    <h3>Дополнительные расходы</h3>
-                    <div class="cost-group">
-                        <h4>Оформление собственности</h4>
-                        <div class="cost-row"><span>Leasehold (земля + вилла)</span><strong>1.1%</strong></div>
-                        <div class="cost-row"><span>Freehold (земля + вилла)</span><strong>6.3%</strong></div>
+                    <h3>Варианты оформления собственности</h3>
+                    <div class="ownership-options">
+                        <div class="ownership-option">
+                            <div class="ownership-header">
+                                <span class="ownership-number">1</span>
+                                <h4>Земля и вилла — Freehold</h4>
+                            </div>
+                            <p class="ownership-note">Доступно только для тайских физических и юридических лиц</p>
+                            <div class="cost-row"><span>Общий сбор</span><strong>6,3%</strong></div>
+                            <div class="cost-row"><span>Условия</span><strong>50/50 с застройщиком</strong></div>
+                            <div class="cost-row highlight"><span>Итого к оплате</span><strong>3,15%</strong></div>
+                        </div>
+                        <div class="ownership-option">
+                            <div class="ownership-header">
+                                <span class="ownership-number">2</span>
+                                <h4>Земля и вилла — Leasehold</h4>
+                            </div>
+                            <div class="cost-row"><span>Общий сбор</span><strong>1,1%</strong></div>
+                            <div class="cost-row"><span>Условия</span><strong>50/50 с застройщиком</strong></div>
+                            <div class="cost-row highlight"><span>Итого к оплате</span><strong>0,55%</strong></div>
+                        </div>
+                        <div class="ownership-option">
+                            <div class="ownership-header">
+                                <span class="ownership-number">3</span>
+                                <h4>Земля — Leasehold / Вилла — Freehold</h4>
+                            </div>
+                            <div class="cost-row"><span>Сбор на землю</span><strong>1,1%</strong></div>
+                            <div class="cost-row"><span>Сбор на строение</span><strong>6,3%</strong></div>
+                            <div class="cost-row"><span>Условия</span><strong>50/50 для каждой части</strong></div>
+                            <div class="cost-row highlight"><span>Итого к оплате</span><strong>0,55% + 3,15%</strong></div>
+                        </div>
                     </div>
-                    <div class="cost-group">
+                    <div class="cost-group" style="margin-top:24px">
                         <h4>Единоразовые платежи</h4>
                         <div class="cost-row"><span>Амортизационный фонд</span><strong>160,000 ฿</strong></div>
                         <div class="cost-row"><span>Установка счетчиков</span><strong>20,000 ฿</strong></div>
@@ -1077,11 +1114,11 @@
                         </div>
                         <div class="control-group">
                             <label>Средняя ставка в день (฿)</label>
-                            <input type="range" id="dailyRate" min="5000" max="10000" value="7500" step="500" oninput="calculateROI()">
+                            <input type="range" id="dailyRate" min="8000" max="15000" value="10000" step="500" oninput="calculateROI()">
                             <div class="range-labels">
-                                <span>5,000</span>
-                                <span class="current" id="dailyRateValue">7,500</span>
-                                <span>10,000</span>
+                                <span>8,000</span>
+                                <span class="current" id="dailyRateValue">10,000</span>
+                                <span>15,000</span>
                             </div>
                         </div>
                         <div class="control-group">
@@ -1096,26 +1133,34 @@
                     </div>
                     <div class="calc-results">
                         <div class="result-main">
-                            <div class="label">Годовая доходность</div>
+                            <div class="label">Годовая доходность (ROI)</div>
                             <div class="value" id="roiPercent">11.4%</div>
                         </div>
                         <div class="result-row">
-                            <span class="label">Годовой доход</span>
-                            <span class="value" id="annualIncome">3,102,500 ฿</span>
+                            <span class="label">Валовый доход</span>
+                            <span class="value" id="grossIncome">3,102,500 ฿</span>
+                        </div>
+                        <div class="result-row expense">
+                            <span class="label">Комиссия Booking/Airbnb (18%)</span>
+                            <span class="value" id="bookingFee">−558,450 ฿</span>
+                        </div>
+                        <div class="result-row expense">
+                            <span class="label">Управляющая компания (20%)</span>
+                            <span class="value" id="managementFee">−508,810 ฿</span>
+                        </div>
+                        <div class="result-row expense">
+                            <span class="label">Налог на доход (15%)</span>
+                            <span class="value" id="taxFee">−305,286 ฿</span>
                         </div>
                         <div class="result-row">
-                            <span class="label">Расходы (15%)</span>
-                            <span class="value" id="annualExpenses">−465,375 ฿</span>
-                        </div>
-                        <div class="result-row">
-                            <span class="label">Чистая прибыль</span>
-                            <span class="value positive" id="netIncome">2,637,125 ฿</span>
+                            <span class="label">Чистая прибыль в год</span>
+                            <span class="value positive" id="netIncome">1,729,954 ฿</span>
                         </div>
                         <div class="result-total">
                             <span class="label">Доход за <span id="periodText">5</span> лет</span>
-                            <span class="value" id="totalIncome">13,185,625 ฿</span>
+                            <span class="value" id="totalIncome">8,649,770 ฿</span>
                         </div>
-                        <p style="font-size:12px;color:var(--text-muted);margin-top:16px;line-height:1.5">*Расчёт основан на текущих рыночных условиях. Фактическая доходность может варьироваться. Высокая доходность обеспечена скидкой 20% от цены пресейла.</p>
+                        <p style="font-size:12px;color:var(--text-muted);margin-top:16px;line-height:1.5">*Расчёт: валовый доход → минус комиссия операторов бронирования → минус 20% управляющей компании → минус 15% налог. Высокая доходность обеспечена скидкой 20% от цены пресейла.</p>
                     </div>
                 </div>
             </div>
@@ -1291,16 +1336,27 @@
 
             document.getElementById('dailyRateValue').textContent = dailyRate.toLocaleString('ru-RU');
 
-            const annualIncome = Math.round(dailyRate * occupancy * 365);
-            const expenses = Math.round(annualIncome * 0.15);
-            const netIncome = annualIncome - expenses;
+            // Валовый доход
+            const grossIncome = Math.round(dailyRate * occupancy * 365);
+            // Комиссия операторов бронирования (18%)
+            const bookingFee = Math.round(grossIncome * 0.18);
+            const afterBooking = grossIncome - bookingFee;
+            // Комиссия управляющей компании (20% от суммы после комиссии операторов)
+            const managementFee = Math.round(afterBooking * 0.20);
+            const afterManagement = afterBooking - managementFee;
+            // Налог на доход (15%)
+            const taxFee = Math.round(afterManagement * 0.15);
+            const netIncome = afterManagement - taxFee;
+            // ROI и итоговый доход
             const roi = ((netIncome / price) * 100).toFixed(1);
             const totalIncome = netIncome * holdingPeriod;
 
             const fmt = n => n.toLocaleString('ru-RU');
 
-            document.getElementById('annualIncome').textContent = fmt(annualIncome) + ' ฿';
-            document.getElementById('annualExpenses').textContent = '−' + fmt(expenses) + ' ฿';
+            document.getElementById('grossIncome').textContent = fmt(grossIncome) + ' ฿';
+            document.getElementById('bookingFee').textContent = '−' + fmt(bookingFee) + ' ฿';
+            document.getElementById('managementFee').textContent = '−' + fmt(managementFee) + ' ฿';
+            document.getElementById('taxFee').textContent = '−' + fmt(taxFee) + ' ฿';
             document.getElementById('netIncome').textContent = fmt(netIncome) + ' ฿';
             document.getElementById('roiPercent').textContent = roi + '%';
             document.getElementById('periodText').textContent = holdingPeriod;
