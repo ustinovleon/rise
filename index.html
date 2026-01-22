@@ -129,8 +129,21 @@
         .villa-image{position:relative;height:240px;overflow:hidden;background:var(--bg-light)}
         .villa-image img{width:100%;height:100%;object-fit:cover;transition:.4s}
         .villa-card:hover .villa-image img{transform:scale(1.05)}
-        .villa-badge{position:absolute;top:16px;left:16px;background:#fff;padding:6px 12px;border-radius:8px;font-size:11px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.3px}
+        .villa-badge{position:absolute;top:16px;left:16px;background:#fff;padding:6px 12px;border-radius:8px;font-size:11px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.3px;z-index:2}
         .villa-badge.available{background:var(--accent);color:#fff}
+        /* Villa Swipe Gallery */
+        .villa-gallery{position:relative;height:240px;overflow:hidden}
+        .villa-gallery-track{display:flex;height:100%;transition:transform .3s ease-out}
+        .villa-gallery-track img{flex-shrink:0;width:100%;height:100%;object-fit:cover}
+        .villa-gallery-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+        .villa-gallery-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;transition:.2s}
+        .villa-gallery-dot.active{background:#fff}
+        .villa-gallery-nav{position:absolute;top:50%;transform:translateY(-50%);width:32px;height:32px;background:rgba(255,255,255,.9);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:.2s;z-index:2}
+        .villa-card:hover .villa-gallery-nav{opacity:1}
+        .villa-gallery-nav:hover{background:#fff}
+        .villa-gallery-prev{left:8px}
+        .villa-gallery-next{right:8px}
+        .villa-gallery-nav svg{width:16px;height:16px}
         .villa-content{padding:24px}
         .villa-type{font-size:12px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
         .villa-name{font-size:20px;font-weight:700;margin-bottom:12px;color:var(--primary)}
@@ -351,7 +364,7 @@
             .gallery-grid{grid-template-columns:repeat(3,1fr)}
             .night-grid{grid-template-columns:1fr}
             .night-card.main{grid-row:span 1}
-            .infra-gallery{grid-template-columns:1fr}
+            .infra-gallery{display:none}
             .masterplan-legend{gap:12px}
             .masterplan-item{padding:10px 16px;font-size:12px}
             .lightbox-nav{display:none}
@@ -362,6 +375,9 @@
             table{font-size:12px}
             th,td{padding:12px!important}
             .contact-card{padding:40px 24px}
+            .header-right .btn-primary{padding:8px 16px;font-size:12px;min-height:44px;margin-left:8px}
+            .result-total{flex-direction:column;gap:8px;text-align:center}
+            .result-total .value{font-size:20px;word-break:break-all}
         }
     </style>
 </head>
@@ -418,10 +434,10 @@
             <div class="hero-content">
                 <span class="hero-badge">
                     <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    Премиум-класс • Laguna Phuket
+                    Премиум-класс • Банг Тао
                 </span>
                 <h1>Проект вилл,<br>который <span>ждали все</span></h1>
-                <p class="hero-subtitle">Премиальные виллы с бассейном и отельной лицензией. Пассивный доход до 11.4% годовых при полном управлении от застройщика.</p>
+                <p class="hero-subtitle">Премиальные виллы с бассейном под отельным управлением. Пассивный доход от 11.4% годовых при полном управлении от застройщика.</p>
                 <div class="hero-buttons">
                     <a href="#villas" class="btn btn-primary">Выбрать виллу</a>
                     <a href="#calculator" class="btn btn-outline">Рассчитать доход</a>
@@ -477,7 +493,7 @@
                     <div class="feature-body">
                         <div class="feature-icon">📍</div>
                         <h3>Пляж Банг Тао</h3>
-                        <p>10 минут до лучшего пляжа острова, рядом Laguna Phuket и гольф-клуб</p>
+                        <p>10 минут до лучшего пляжа острова протяженностью 6 км, рядом гольф-клуб</p>
                     </div>
                 </div>
                 <div class="feature-card">
@@ -487,7 +503,7 @@
                     <div class="feature-body">
                         <div class="feature-icon">🏨</div>
                         <h3>Отельное управление</h3>
-                        <p>Официальная лицензия для аренды через Booking и Airbnb</p>
+                        <p>Управляющая компания обеспечивает высокую доходность и заполняемость в краткосрочной аренде через Booking.com, Airbnb, Expedia, Островок и другие системы бронирования</p>
                     </div>
                 </div>
                 <div class="feature-card">
@@ -496,7 +512,7 @@
                     </div>
                     <div class="feature-body">
                         <div class="feature-icon">📈</div>
-                        <h3>ROI до 11.4%</h3>
+                        <h3>ROI от 11.4%</h3>
                         <p>Высокая доходность благодаря круглогодичному турпотоку</p>
                     </div>
                 </div>
@@ -525,9 +541,16 @@
             <div class="villas-grid">
                 <!-- Villa Type 1 -->
                 <div class="villa-card">
-                    <div class="villa-image">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_001244.jpg?alt=media" alt="Вилла Тип 1">
+                    <div class="villa-image villa-gallery" data-gallery="villa1">
                         <span class="villa-badge available">Доступно</span>
+                        <div class="villa-gallery-track">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_001244.jpg?alt=media" alt="Вилла Тип 1">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_005249.jpg?alt=media" alt="Вилла Тип 1 - вид 2" loading="lazy">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_006250.jpg?alt=media" alt="Вилла Тип 1 - вид 3" loading="lazy">
+                        </div>
+                        <button class="villa-gallery-nav villa-gallery-prev" onclick="slideVillaGallery(this,-1)"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></button>
+                        <button class="villa-gallery-nav villa-gallery-next" onclick="slideVillaGallery(this,1)"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
+                        <div class="villa-gallery-dots"></div>
                     </div>
                     <div class="villa-content">
                         <div class="villa-type">Вилла Тип 1</div>
@@ -559,9 +582,16 @@
 
                 <!-- Villa Type 3 -->
                 <div class="villa-card">
-                    <div class="villa-image">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_003245.jpg?alt=media" alt="Вилла Тип 3">
+                    <div class="villa-image villa-gallery" data-gallery="villa3">
                         <span class="villa-badge available">Доступно</span>
+                        <div class="villa-gallery-track">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_003245.jpg?alt=media" alt="Вилла Тип 3">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_003_NIGHT246.jpg?alt=media" alt="Вилла Тип 3 - ночь" loading="lazy">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%2F%D0%92%D0%B8%D0%BB%D0%BB%D0%B0%20%D0%A2%D0%B8%D0%BF%203%2FHi-Res%2F114.jpg?alt=media" alt="Вилла Тип 3 - интерьер" loading="lazy">
+                        </div>
+                        <button class="villa-gallery-nav villa-gallery-prev" onclick="slideVillaGallery(this,-1)"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></button>
+                        <button class="villa-gallery-nav villa-gallery-next" onclick="slideVillaGallery(this,1)"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
+                        <div class="villa-gallery-dots"></div>
                     </div>
                     <div class="villa-content">
                         <div class="villa-type">Вилла Тип 3</div>
@@ -593,9 +623,16 @@
 
                 <!-- Townhouse -->
                 <div class="villa-card">
-                    <div class="villa-image">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_004247.jpg?alt=media" alt="Таунхаус">
+                    <div class="villa-image villa-gallery" data-gallery="townhouse">
                         <span class="villa-badge">Лучшая цена</span>
+                        <div class="villa-gallery-track">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_004247.jpg?alt=media" alt="Таунхаус">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_004_NIGHT248.jpg?alt=media" alt="Таунхаус - ночь" loading="lazy">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%2F%D0%A2%D0%B0%D1%83%D0%BD%D1%85%D0%B0%D1%83%D1%81%2FHi-Res%2F1136.jpg?alt=media" alt="Таунхаус - интерьер" loading="lazy">
+                        </div>
+                        <button class="villa-gallery-nav villa-gallery-prev" onclick="slideVillaGallery(this,-1)"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></button>
+                        <button class="villa-gallery-nav villa-gallery-next" onclick="slideVillaGallery(this,1)"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
+                        <div class="villa-gallery-dots"></div>
                     </div>
                     <div class="villa-content">
                         <div class="villa-type">Таунхаус</div>
@@ -990,7 +1027,7 @@
             </div>
             <div class="highlights-grid">
                 <div class="highlight-card">
-                    <div class="highlight-number">11.4%</div>
+                    <div class="highlight-number">>11.4%</div>
                     <h3>Годовой ROI</h3>
                     <p>Стабильный доход от краткосрочной аренды туристам круглый год</p>
                 </div>
@@ -1078,7 +1115,7 @@
                             <span class="label">Доход за <span id="periodText">5</span> лет</span>
                             <span class="value" id="totalIncome">13,185,625 ฿</span>
                         </div>
-                        <p style="font-size:12px;color:var(--text-muted);margin-top:16px;line-height:1.5">*Расчёт основан на текущих рыночных условиях. Фактическая доходность может варьироваться.</p>
+                        <p style="font-size:12px;color:var(--text-muted);margin-top:16px;line-height:1.5">*Расчёт основан на текущих рыночных условиях. Фактическая доходность может варьироваться. Высокая доходность обеспечена скидкой 20% от цены пресейла.</p>
                     </div>
                 </div>
             </div>
@@ -1090,38 +1127,13 @@
         <div class="container">
             <div class="section-header center">
                 <span class="section-badge">Локация</span>
-                <h2 class="section-title">Laguna Phuket</h2>
+                <h2 class="section-title">Пляж Банг Тао</h2>
                 <p class="section-description">Премиальный район с развитой инфраструктурой и 5-звёздочными соседями</p>
             </div>
 
-            <!-- Infrastructure Gallery -->
-            <div class="infra-gallery">
-                <div class="infra-card" onclick="openLightbox(15)">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_TOP1_BIRD252.jpg?alt=media" alt="Вид сверху" loading="lazy">
-                    <div class="infra-card-overlay">
-                        <h4>Вид на комплекс</h4>
-                        <span>Тропический ландшафт</span>
-                    </div>
-                </div>
-                <div class="infra-card" onclick="openLightbox(16)">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_006250.jpg?alt=media" alt="Территория" loading="lazy">
-                    <div class="infra-card-overlay">
-                        <h4>Благоустроенная территория</h4>
-                        <span>Дорожки, освещение, озеленение</span>
-                    </div>
-                </div>
-                <div class="infra-card" onclick="openLightbox(17)">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_007251.jpg?alt=media" alt="Архитектура" loading="lazy">
-                    <div class="infra-card-overlay">
-                        <h4>Современная архитектура</h4>
-                        <span>Тропический минимализм</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="location-grid" style="margin-top:48px">
+            <div class="location-grid">
                 <div class="location-image">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%9B%D0%BE%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%2F%D0%9B%D0%BE%D0%BA%D0%B0%D1%86%D0%B8%D1%8F1%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg?alt=media" alt="Карта Laguna Phuket">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%9B%D0%BE%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%2F%D0%9B%D0%BE%D0%BA%D0%B0%D1%86%D0%B8%D1%8F1%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg?alt=media" alt="Карта пляжа Банг Тао">
                 </div>
                 <div class="location-list">
                     <div class="location-item">
@@ -1161,6 +1173,32 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Infrastructure Gallery -->
+            <div class="infra-gallery" style="margin-top:48px">
+                <div class="infra-card" onclick="openLightbox(15)">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_TOP1_BIRD252.jpg?alt=media" alt="Вид сверху" loading="lazy">
+                    <div class="infra-card-overlay">
+                        <h4>Вид на комплекс</h4>
+                        <span>Тропический ландшафт</span>
+                    </div>
+                </div>
+                <div class="infra-card" onclick="openLightbox(16)">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_006250.jpg?alt=media" alt="Территория" loading="lazy">
+                    <div class="infra-card-overlay">
+                        <h4>Благоустроенная территория</h4>
+                        <span>Дорожки, освещение, озеленение</span>
+                    </div>
+                </div>
+                <div class="infra-card" onclick="openLightbox(17)">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kalinka-dashboard.firebasestorage.app/o/Rise%2FRise%20Villas%2F%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D1%8B%2F%D0%AD%D0%BA%D1%81%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80%20%2FHi-Res%2FCAM_007251.jpg?alt=media" alt="Архитектура" loading="lazy">
+                    <div class="infra-card-overlay">
+                        <h4>Современная архитектура</h4>
+                        <span>Тропический минимализм</span>
+                    </div>
+                </div>
+            </div>
+
             <div style="text-align:center;margin-top:40px">
                 <a href="https://maps.app.goo.gl/dM1eCiFkjUr1cvPTA" target="_blank" class="btn btn-outline">
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
@@ -1369,6 +1407,65 @@
                     item.style.display = 'none';
                 }
             });
+        }
+
+        // Villa Gallery Swipe
+        (function() {
+            const galleries = document.querySelectorAll('.villa-gallery');
+            galleries.forEach(gallery => {
+                const track = gallery.querySelector('.villa-gallery-track');
+                const images = track.querySelectorAll('img');
+                const dotsContainer = gallery.querySelector('.villa-gallery-dots');
+                let currentIndex = 0;
+                let startX = 0;
+                let isDragging = false;
+
+                // Create dots
+                images.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    dot.className = 'villa-gallery-dot' + (i === 0 ? ' active' : '');
+                    dot.onclick = () => goToSlide(i);
+                    dotsContainer.appendChild(dot);
+                });
+
+                function goToSlide(index) {
+                    currentIndex = index;
+                    track.style.transform = `translateX(-${index * 100}%)`;
+                    dotsContainer.querySelectorAll('.villa-gallery-dot').forEach((d, i) => {
+                        d.classList.toggle('active', i === index);
+                    });
+                }
+
+                // Touch events
+                track.addEventListener('touchstart', e => {
+                    startX = e.touches[0].clientX;
+                    isDragging = true;
+                }, {passive: true});
+
+                track.addEventListener('touchend', e => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    const diff = startX - e.changedTouches[0].clientX;
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0 && currentIndex < images.length - 1) goToSlide(currentIndex + 1);
+                        else if (diff < 0 && currentIndex > 0) goToSlide(currentIndex - 1);
+                    }
+                }, {passive: true});
+
+                gallery.goToSlide = goToSlide;
+                gallery.getIndex = () => currentIndex;
+                gallery.getTotal = () => images.length;
+            });
+        })();
+
+        function slideVillaGallery(btn, dir) {
+            const gallery = btn.closest('.villa-gallery');
+            const idx = gallery.getIndex();
+            const total = gallery.getTotal();
+            let newIdx = idx + dir;
+            if (newIdx < 0) newIdx = total - 1;
+            if (newIdx >= total) newIdx = 0;
+            gallery.goToSlide(newIdx);
         }
     </script>
 </body>
